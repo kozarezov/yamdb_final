@@ -21,7 +21,7 @@ jobs:
         python -m flake8 
     - name: Django tests
       run: pytest
-build_and_push_to_docker_hub:
+  build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     needs: tests
@@ -39,6 +39,7 @@ build_and_push_to_docker_hub:
     - name: Push to Docker Hub
       uses: docker/build-push-action@v2 
       with:
+        context: ./api_yamdb
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
   deploy:
