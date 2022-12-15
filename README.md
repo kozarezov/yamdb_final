@@ -30,28 +30,14 @@ Check it out!
 
 ## 2. How to launch:
 
-#### Clone repository:
+The project is assembled using Github Workflow when pushing to the Master branch.
+
+After deployment, the project is available by IP
+
+#### IP adress to deployed project:
 
 ```sh
- git clone https://github.com/kozarezov/infra_sp2
- ```
-
-#### Create and activate Virtual Environment:
-
-```sh
-docker-compose up -d --build 
- ```
-
-```sh
-docker-compose exec web python manage.py migrate
- ```
-
-```sh
-docker-compose exec web python manage.py createsuperuser
- ```
-
-```sh
-docker-compose exec web python manage.py collectstatic --no-input 
+ http://158.160.53.219
  ```
 
 ## 3. Environment variables:
